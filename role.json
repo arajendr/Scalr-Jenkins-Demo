@@ -1,0 +1,61 @@
+{
+    "_meta": {
+        "schema_version": "v1beta0-7.11.0"
+    },
+    "farm": {
+        "name": "Jenkins Based Trigger",
+        "description": "",
+        "project": {
+            "id": "7ee531f8-ac19-4e41-a2ea-04b86db9fbbb"
+        },
+        "timezone": "America\/New_York",
+        "launchOrder": "simultaneous",
+        "variables": []
+    },
+    "roles": [
+        {
+            "alias": "test-script",
+            "role": {
+                "name": "test-script"
+            },
+            "cloudPlatform": "ec2",
+            "cloudLocation": "us-east-1",
+            "instanceType": {
+                "id": "t2.micro"
+            },
+            "launchIndex": 0,
+            "networking": {
+                "networks": [
+                    {
+                        "id": "vpc-1104cf68"
+                    }
+                ],
+                "subnets": [
+                    {
+                        "id": "subnet-ee5f83c2"
+                    }
+                ]
+            },
+            "cloudFeatures": {
+                "type": "AwsCloudFeatures",
+                "ebsOptimized": false
+            },
+            "security": {
+                "securityGroups": [
+                    {
+                        "name": "default"
+                    },
+                    {
+                        "name": "Scalr-NGS-Sep22"
+                    }
+                ]
+            },
+            "variables": [
+            ],
+            "orchestration": {
+                "rules": []
+            },
+            "storage": []
+        }
+    ]
+}
